@@ -38,7 +38,10 @@ function getOpponent() {
                 } else {
                 console.error('Error getting players');
                 }
-            }                    
+            }
+            else{
+                alert("You are not authorized")
+            }
         }
     };
 
@@ -58,6 +61,7 @@ function makeMove(move) {
                 updateBoard();
             } else {
                 console.error('Error making move');
+                alert("You are not authorized")
             }
         }
     };
@@ -79,6 +83,7 @@ function updateBoard() {
                 renderBoard(board);
             } else {
                 console.error('Error getting board');
+                alert("You are not authorized")
             }
         }
     };
@@ -123,6 +128,7 @@ function checkWin() {
                 }
             } else {
                 console.error('Error getting winner');
+                alert("You are not authorized")
             }
         }
     };
@@ -143,6 +149,7 @@ function endGame(){
                 checkEndGame();
             } else {
                 console.error('Error ending game');
+                alert("You are not authorized")
             }
         }
     };
@@ -165,7 +172,10 @@ function checkEndGame(){
                     window.location = "index.html";
                 }
 
-            }                    
+            }       
+            else{
+                alert("You are not authorized")
+            }
         }
     };
 
