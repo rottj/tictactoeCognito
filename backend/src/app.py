@@ -15,13 +15,9 @@ app.config['SECRET_KEY'] = 'secret!'
 CORS(app)  
 
 jwtManager = JWTManager(app)
-#USER_POOL_ID = os.getenv("USER_POOL_ID")
-#APP_CLIENT_ID = os.getenv("APP_CLIENT_ID")
-#COGNITO_REGION = os.getenv("COGNITO_REGION", "us-east-1")
-
-USER_POOL_ID = "us-east-1_3A5UDLTmE"
-APP_CLIENT_ID = "7mv6vd6sdj01b4ko41ut4v5as0"
-COGNITO_REGION = "us-east-1"
+USER_POOL_ID = os.getenv("USER_POOL_ID")
+APP_CLIENT_ID = os.getenv("APP_CLIENT_ID")
+COGNITO_REGION = os.getenv("COGNITO_REGION", "us-east-1")
 
 cognito_client = boto3.client("cognito-idp", region_name=COGNITO_REGION)
 
